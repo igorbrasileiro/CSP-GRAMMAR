@@ -28,7 +28,7 @@ simpleDefinition
 	;
 
 assertDefinition
-	: ASSERT definitionLeft ' :[' checkConditionBody ']'
+	: ASSERT definitionLeft COLLON LBRACKET checkConditionBody RBRACKET
 	;
 	
 definitionLeft
@@ -87,7 +87,7 @@ proc									//TODO: came from rule _proc (try to make union of rules _proc and 
 	| proc INTR proc						//interrupt operator
 	| proc SEMICOL proc						//sequential composition
 	| LPAREN proc RPAREN
-	| ID				//TODO: revise
+	| ID								//TODO: revise
 	;
 		
 
@@ -150,6 +150,8 @@ FALSE : 'false' ;
 GUARD : '&' ;
 LPAREN : '(' ;
 RPAREN : ')' ;
+LBRACKET: '[';
+RBRACKET: ']';
 LSYNC : '[|' ;
 RSYNC : '|]' ;
 INTL :	'|||';
