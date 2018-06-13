@@ -192,5 +192,5 @@ LINECOMMENT
     ;
 	
 WS
-   : [ \r\n\t] + -> channel (HIDDEN)
+   : [ \r\n\t]+ -> channel (HIDDEN)
    ;
